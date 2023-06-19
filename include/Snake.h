@@ -22,6 +22,7 @@ class Snake
         void change_dir(char dir); // change direction of snake
         void move_snake(); // move snake in current direction
         COORD get_pos(); // get current position of snake
+        char get_dir();
 
         bool eaten(COORD food_pos);
 

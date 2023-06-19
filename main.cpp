@@ -67,10 +67,18 @@ int main()
         {
             switch(getch())
             {
-                case 'w': snake.change_dir('u'); break;
-                case 'a': snake.change_dir('l'); break;
-                case 's': snake.change_dir('d'); break;
-                case 'd': snake.change_dir('r'); break;
+                case 'w':
+                    if(snake.get_body().size() > 1 && snake.get_dir() == 'd') break;
+                    snake.change_dir('u'); break;
+                case 'a':
+                    if(snake.get_body().size() > 1 && snake.get_dir() == 'r') break;
+                    snake.change_dir('l'); break;
+                case 's':
+                    if(snake.get_body().size() > 1 && snake.get_dir() == 'u') break;
+                    snake.change_dir('d'); break;
+                case 'd':
+                    if(snake.get_body().size() > 1 && snake.get_dir() == 'l') break;
+                    snake.change_dir('r'); break;
             }
         }
 

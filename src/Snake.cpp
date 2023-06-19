@@ -52,3 +52,8 @@ bool Snake::collided()
     }
     return false;
 }
+
+char Snake::get_dir()
+{
+    return direction;
+}

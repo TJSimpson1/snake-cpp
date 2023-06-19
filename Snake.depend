@@ -6,11 +6,11 @@
 	"Snake.h"
 	"Food.h"
 
-1687187254 c:\users\travi\projekte\snake\include\snake.h
+1687189353 c:\users\travi\projekte\snake\include\snake.h
 	<windows.h>
 	<vector>
 
-1687188116 source:c:\users\travi\projekte\snake\src\snake.cpp
+1687189370 source:c:\users\travi\projekte\snake\src\snake.cpp
 	"Snake.h"
 
 1687183894 c:\users\travi\projekte\snake\include\food.h
