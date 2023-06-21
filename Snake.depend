@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1687187445 source:c:\users\travi\projekte\snake\main.cpp
+1687355612 source:c:\users\travi\projekte\snake\main.cpp
 	<iostream>
 	<conio.h>
 	<ctime>
 	"Snake.h"
 	"Food.h"
 
-1687189353 c:\users\travi\projekte\snake\include\snake.h
+1687354943 c:\users\travi\projekte\snake\include\snake.h
 	<windows.h>
-	<vector>
+	<list>
 
 1687189370 source:c:\users\travi\projekte\snake\src\snake.cpp
 	"Snake.h"

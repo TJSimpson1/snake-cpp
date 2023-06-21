@@ -1,5 +1,7 @@
 #include "Snake.h"
 
+#include <iterator>
+
 Snake::Snake(COORD pos, int vel)
 {
     this->pos = pos;
@@ -12,7 +14,7 @@ Snake::Snake(COORD pos, int vel)
 
 void Snake::change_dir(char dir) { direction = dir; }
 
-vector<COORD> Snake::get_body() { return body; }
+list<COORD> Snake::get_body() { return body; }
 
 void Snake::move_snake()
 {
@@ -46,9 +48,11 @@ void Snake::grow() { len++; }
 bool Snake::collided()
 {
     //if(pos.X < 1 || pos.X > WIDTH-2 || pos.Y < 1 || pos.Y > HEIGHT-2) return true;
+    auto it = body.begin();
     for(int i = 0; i < len-1; i++)
     {
-        if(pos.X == body[i].X && pos.Y == body[i].Y) return true;
+        if(pos.X == (*it).X && pos.Y == (*it).Y) return true;
+        ++it;
     }
     return false;
 }

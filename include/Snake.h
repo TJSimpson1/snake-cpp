@@ -2,7 +2,7 @@
 #define SNAKE_H
 
 #include <windows.h>
-#include <vector>
+#include <list>
 #define WIDTH 50
 #define HEIGHT 25
 
@@ -15,7 +15,7 @@ class Snake
         int len;
         int vel;
         char direction;
-        vector<COORD> body;
+        list<COORD> body;
 
     public:
         Snake(COORD pos, int vel); // constructor
@@ -26,7 +26,7 @@ class Snake
 
         bool eaten(COORD food_pos);
 
-        vector<COORD> get_body();
+        list<COORD> get_body();
 
         void grow();
         bool collided();
