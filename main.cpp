@@ -20,7 +20,7 @@ void board()
     COORD snake_pos = snake.get_pos();
     COORD food_pos = food.get_pos();
 
-    vector<COORD> snake_body = snake.get_body();
+    list<COORD> snake_body = snake.get_body();
 
     cout << "SCORE: " << score << "\n\n";
 
@@ -34,14 +34,16 @@ void board()
             else
             {
                 bool isBodyPart = false;
+                auto it = snake_body.begin();
                 for(int k = 0; k < snake_body.size()-1; k++)
                 {
-                    if(i == snake_body[k].Y && j+1 == snake_body[k].X)
+                    if(i == (*it).Y && j+1 == (*it).X)
                     {
                         cout << 'o';
                         isBodyPart = true;
                         break;
                     }
+                    ++it;
                 }
 
                 if(!isBodyPart) cout << ' ';
